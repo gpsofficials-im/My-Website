@@ -1,0 +1,51 @@
+{
+  "name": "gpsofficialhim-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, fully responsive personal portfolio website for GP'S Officials HIM",
+  "author": "GP'S Officials HIM",
+  "license": "MIT",
+  "homepage": "https://www.gpsofficialhim.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/gpsofficialhim.git"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-portfolio",
+    "web-design",
+    "freelance",
+    "developer",
+    "responsive",
+    "dark-theme",
+    "glassmorphism"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.0",
+    "clean-css-cli": "^5.6.0",
+    "csso-cli": "^4.0.0",
+    "imagemin-cli": "^7.0.0",
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "start": "http-server -c-1 -o -p 8000",
+    "serve": "http-server -p 8000",
+    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
+    "minify-js": "uglifyjs js/main.js -o js/main.min.js -c -m",
+    "minify-all": "npm run minify-css && npm run minify-js",
+    "build": "npm run minify-all",
+    "deploy": "git add . && git commit -m 'Deploy portfolio' && git push origin main"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}

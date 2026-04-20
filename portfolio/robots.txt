@@ -1,0 +1,34 @@
+# robots.txt for GP'S Officials HIM Portfolio
+# Controls search engine crawler access and behavior
+
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /backup/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /404.html
+
+# Crawl delay (milliseconds between requests)
+Crawl-delay: 1
+
+# Request rate
+Request-rate: 1/1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.gpsofficialhim.com/sitemap.xml
+Sitemap: https://gpsofficialhim.com/sitemap.xml
